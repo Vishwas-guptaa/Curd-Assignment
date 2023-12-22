@@ -43,7 +43,7 @@
         <% ram.forEach(client => { %>
             <tr>
                 <td><%= client.name %></td>
-                <td><%= client.listname %></td>
+                <td><%= client.lastname %></td>
                 <td><%= client.email %></td>
                
                 <td><%= client.mobile %></td>
@@ -60,6 +60,7 @@
 
         </div>
         <div class="col-md-4">
+            <h4>Create Client</h4>
      <!-- Add Client Form -->
 <form action="/clientinsert" method="post" class="mt-3">
     <div class="form-group">
