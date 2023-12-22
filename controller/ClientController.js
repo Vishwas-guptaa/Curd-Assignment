@@ -7,7 +7,7 @@ class ClientController {
         try {
             const { name, email, lastname, mobile, project } = req.body
 
-            const data = await new ClientModel({
+            const data =  new ClientModel({
                 name: name,
                 email: email,
                 mobile: mobile,
@@ -17,6 +17,7 @@ class ClientController {
             
             await data.save()
         //   console.log(data)
+        res.redirect("/client");
         } catch (eroor) {
             console.log("error")
         }
